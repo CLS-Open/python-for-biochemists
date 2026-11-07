@@ -1,0 +1,39 @@
+name: "Proposal: new module or lesson"
+description: Propose content — read CONTRIBUTING.md first; proposals are reviewed before writing
+title: "[proposal] "
+labels: ["proposal", "needs-scoping"]
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Learning objectives (measurable)
+      description: "After this lesson a learner can ... (use verbs you can assess)"
+    validations:
+      required: true
+  - type: textarea
+    id: existing
+    attributes:
+      label: What already exists, and why is it insufficient?
+      description: Links required. Duplicating good material is a reason for rejection.
+    validations:
+      required: true
+  - type: textarea
+    id: data
+    attributes:
+      label: Dataset (with licence and accession)
+      description: Public, open-tier, ideally <5 MB shipped. No controlled-access data.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: How will a learner verify their answer?
+    validations:
+      required: true
+  - type: checkboxes
+    id: licence
+    attributes:
+      label: Licensing
+      options:
+        - label: I agree my contribution will be licensed MIT (code) / CC BY 4.0 (content)
+          required: true

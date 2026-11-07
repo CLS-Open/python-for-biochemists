@@ -1,0 +1,43 @@
+name: "Adoption report (instructor)"
+description: You taught with this material — tell us what broke. This is the most valuable contribution we receive.
+title: "[adoption] "
+labels: ["adoption"]
+body:
+  - type: input
+    id: context
+    attributes:
+      label: Course, level, cohort size
+      placeholder: "BSc Biochemistry, 2nd year, 42 students, 12-hour workshop"
+    validations:
+      required: true
+  - type: input
+    id: modules
+    attributes:
+      label: Which modules/practicals did you use?
+    validations:
+      required: true
+  - type: textarea
+    id: broke
+    attributes:
+      label: What broke or confused learners?
+      description: Be specific — exact step, exact error, how many learners hit it.
+    validations:
+      required: true
+  - type: textarea
+    id: worked
+    attributes:
+      label: What worked well? (so we do not "fix" it)
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment constraints you faced
+      placeholder: "shared lab PCs, no admin rights, 2 Mbit/s wifi, offline exam room"
+  - type: checkboxes
+    id: credit
+    attributes:
+      label: Credit
+      options:
+        - label: You may name me and my institution in the adoption log
+        - label: Please keep my adoption report anonymous

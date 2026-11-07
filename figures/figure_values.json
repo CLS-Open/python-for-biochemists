@@ -1,0 +1,111 @@
+{
+  "_note": "Every number below was computed by scripts/make_figures.py. Modules quote these values; nothing here is typed by hand.",
+  "figure_1": {
+    "vmax": 9.9838,
+    "km": 24.8774,
+    "vmax_stderr": 0.1069,
+    "km_stderr": 0.84,
+    "r_squared": 0.99742,
+    "aicc": -97.058,
+    "bootstrap_vmax_95": [
+      9.7095,
+      10.263
+    ],
+    "bootstrap_km_95": [
+      23.3591,
+      26.4488
+    ],
+    "points": 27,
+    "source": "datasets/sample/michaelis_menten.csv"
+  },
+  "figure_2": {
+    "seeds": 400,
+    "estimates_above_axis_limit": 13,
+    "noise": "3 % proportional + 0.05 absolute, constant across [S]",
+    "methods": {
+      "nonlinear": {
+        "median_vmax": 9.995,
+        "iqr_vmax": [
+          9.827,
+          10.19
+        ],
+        "fraction_within_20pct": 1.0,
+        "n": 400
+      },
+      "Hanes–Woolf": {
+        "median_vmax": 10.008,
+        "iqr_vmax": [
+          9.813,
+          10.207
+        ],
+        "fraction_within_20pct": 1.0,
+        "n": 400
+      },
+      "Eadie–Hofstee": {
+        "median_vmax": 9.89,
+        "iqr_vmax": [
+          9.675,
+          10.126
+        ],
+        "fraction_within_20pct": 1.0,
+        "n": 400
+      },
+      "Lineweaver–Burk": {
+        "median_vmax": 9.735,
+        "iqr_vmax": [
+          8.459,
+          12.119
+        ],
+        "fraction_within_20pct": 0.57,
+        "n": 400
+      }
+    }
+  },
+  "figure_3": {
+    "best_by_aicc": "competitive",
+    "delta_aicc": {
+      "competitive": 0.0,
+      "noncompetitive": 42.553,
+      "uncompetitive": 57.9
+    },
+    "fit_ki": 8.5911,
+    "fit_vmax": 9.6056,
+    "fit_km": 24.0369,
+    "source": "datasets/sample/inhibition_series.csv",
+    "truth": {
+      "vmax": 10.0,
+      "km": 25.0,
+      "ki": 8.0,
+      "mechanism": "competitive"
+    }
+  },
+  "figure_4": {
+    "weighted": {
+      "slope": 0.049013,
+      "intercept": 0.012342,
+      "residual_sd": 0.001623,
+      "lod": 0.1093,
+      "loq": 0.3312
+    },
+    "unweighted": {
+      "slope": 0.047635,
+      "intercept": 0.012453,
+      "residual_sd": 0.091774,
+      "lod": 6.3578,
+      "loq": 19.266
+    },
+    "lod_ratio_unweighted_over_weighted": 58.17,
+    "relative_error_estimate": 0.0394,
+    "source": "datasets/sample/calibration_mean.csv",
+    "truth": {
+      "slope": 0.0485,
+      "intercept": 0.011
+    }
+  },
+  "_figure_hashes": {
+    "fig1_michaelis_menten_fit.png": "f2b29aa048aea9db4ea200379f009c3b8e44825e0403ea4cce1e2142583670d4",
+    "fig2_linearisation_bias.png": "fa952694b8351a65b70508e6f124ac3e9bcd782cc97ad810e90daa67d88f9a6f",
+    "fig3_inhibition_mechanisms.png": "3d3a25184674903caa72eb7805617b6e9f45a61fbcf2c5561e647cf6c37af481",
+    "fig4_calibration_weighting.png": "b3d6126e9ee7bcdb84d11f2bdf67b9f016ba888400006a6d09daa4708a9cd565"
+  }
+}

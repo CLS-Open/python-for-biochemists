@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kinetics"
+version = "0.1.0"
+description = "Enzyme kinetics models, fitting and diagnostics — a teaching package for Python for Biochemical Data and Enzyme Kinetics (CLS-Open #2)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Ademola Emmanuel Tolulope" }]
+keywords = ["biochemistry", "enzyme kinetics", "michaelis-menten", "education", "python"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Education",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+  "Topic :: Scientific/Engineering :: Chemistry",
+]
+dependencies = ["numpy>=1.24", "scipy>=1.10"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-cov>=5", "matplotlib>=3.8", "pyyaml>=6", "nbformat>=5", "nbclient>=0.10", "ipykernel>=6.29"]
+
+[project.scripts]
+kinetics = "kinetics.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/cls-open/python-for-biochemists"
+Documentation = "https://cls-open.github.io/python-for-biochemists/"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+src = ["src", "tests", "scripts"]
+# Notebooks are checked by executing them in CI (scripts/check_notebooks.py); linting
+# their cells as scripts produces import-order and context-manager noise that says
+# nothing about whether the notebook is correct.
+extend-exclude = ["notebooks/*.ipynb"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "RUF", "C4", "PL", "ISC", "NPY"]
+ignore = [
+  "PLR0913",  # many arguments: these are numerical APIs, named at the call site
+  "PLR2004",  # "magic" comparison values in tests are the physics
+  "PLR0915",  # long functions: report builders are long by nature
+  "E501",     # line length is handled by the formatter, not the linter
+  "ISC001",   # implicit string concatenation is used deliberately in notes
+  "PLR0912",  # branch counts in parsers
+  "PLW2901",  # loop variable overwritten: local obvious reassignment
+  "B008",
+  "RUF001",  # en dashes, µ and σ in docstrings are the subject matter
+  "RUF002",
+  "RUF003",
+  "E741",     # "I" is the inhibitor concentration; renaming it would be worse
+  "PLR0917",  # rate-law argument order is the model's definition, not a smell
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["PLR2004", "SLF001", "S101", "PLR0915", "B905", "PLC0415", "RUF015", "RUF043"]
+"scripts/*" = ["PLR2004", "T201"]

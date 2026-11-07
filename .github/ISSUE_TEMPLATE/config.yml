@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Academic-integrity or conduct concern
+    url: https://github.com/cls-open/python-for-biochemists/blob/main/CODE_OF_CONDUCT.md
+    about: Do not open a public issue for a conduct report — contact the address in CODE_OF_CONDUCT.md.
+  - name: Security vulnerability
+    url: https://github.com/cls-open/python-for-biochemists/blob/main/SECURITY.md
+    about: Please report privately rather than in a public issue.

@@ -1,0 +1,38 @@
+name: "Content error / scientific inaccuracy"
+description: Report a factual, scientific or numerical error in the teaching material
+title: "[content] "
+labels: ["content-error", "priority:high"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: File and section
+      placeholder: "docs/modules/02-types-control-flow-sequences.md §5"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong?
+      description: Quote the sentence and state the error precisely.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What should it say?
+      description: Include a reference or a calculation supporting the correction.
+    validations:
+      required: true
+  - type: input
+    id: reference
+    attributes:
+      label: Reference (DOI / PMID / URL)
+      placeholder: "doi:10.1093/nar/gkp1137"
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmations
+      options:
+        - label: I have verified this against a primary source, not a secondary summary
+          required: true

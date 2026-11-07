@@ -1,0 +1,84 @@
+site_name: "Python for Biochemical Data and Enzyme Kinetics — CLS-Open #2"
+site_description: "Fitting enzyme kinetics without fooling yourself: models, weighting, uncertainty and model choice, with every number produced by executed code"
+site_url: https://cls-open.github.io/python-for-biochemists/
+repo_url: https://github.com/cls-open/python-for-biochemists
+repo_name: cls-open/python-for-biochemists
+edit_uri: edit/main/docs/
+copyright: "Content CC BY 4.0 · Code MIT · CLS-Open initiative"
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: amber
+      toggle: { icon: material/weather-night, name: Switch to dark mode }
+    - scheme: slate
+      primary: indigo
+      accent: amber
+      toggle: { icon: material/weather-sunny, name: Switch to light mode }
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - search.suggest
+    - toc.follow
+
+nav:
+  - Home: index.md
+  - Start:
+      - Installation: installation.md
+      - Prerequisites: prerequisites.md
+      - Learning path: learning_path.md
+  - Modules:
+      - "1 · Units, rates and what an assay measures": modules/01-units-rates-and-what-an-assay-measures.md
+      - "2 · The Michaelis–Menten model": modules/02-the-michaelis-menten-model-and-the-two-numbers-people-misquote.md
+      - "3 · Linearisations and what the transformation costs": modules/03-linearisations-and-what-the-transformation-costs.md
+      - "4 · Uncertainty, standard errors and the bootstrap": modules/04-uncertainty-standard-errors-and-the-bootstrap.md
+      - "5 · Weighting, error models and the shape of noise": modules/05-weighting-error-models-and-the-shape-of-noise.md
+      - "6 · Choosing between models without fooling yourself": modules/06-choosing-between-models-without-fooling-yourself.md
+  - Practicals:
+      - "1 · Your first Michaelis–Menten fit": practicals/practical-01-first-michaelis-menten-fit.md
+      - "2 · The Lineweaver–Burk trap": practicals/practical-02-the-lineweaver-burk-trap.md
+      - "3 · Bootstrap intervals and replicates": practicals/practical-03-bootstrap-intervals-and-replicates.md
+      - "4 · Weighting a calibration": practicals/practical-04-weighting-a-calibration.md
+      - "5 · Typing an inhibitor": practicals/practical-05-typing-an-inhibitor.md
+  - Assessment:
+      - "Assignment 1 · Fit a curve, then defend it": assessments/assignment-01-fitting-decisions.md
+      - "Challenge 1 · The dataset that cannot be typed": assessments/challenge-01-the-dataset-that-cannot-be-typed.md
+      - "Challenge 2 · The LOD you would defend": assessments/challenge-02-the-lod-you-would-defend.md
+      - "Quiz (Modules 1–6)": assessments/quiz-01-modules-1-6.md
+  - Reference:
+      - Validation: validation.md
+      - Limitations: limitations.md
+      - References: references.md
+      - Roadmap: roadmap.md
+      - Instructor pack: instructor/index.md
+      - Teaching plans: instructor/teaching-plans.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+validation:
+  nav:
+    omitted_files: warn
+    not_found: warn
+  links:
+    absolute_links: warn
+    not_found: warn
+    unrecognized_links: warn

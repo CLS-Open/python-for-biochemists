@@ -1,0 +1,37 @@
+name: "Exercise feedback (learner)"
+description: An exercise was unclear, ambiguous, too hard, too easy, or its answer key is wrong
+title: "[exercise] "
+labels: ["exercise-feedback"]
+body:
+  - type: input
+    id: which
+    attributes:
+      label: Which exercise?
+      placeholder: "Practical 01, step 4"
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of problem
+      options:
+        - Unclear instructions
+        - Ambiguous expected answer
+        - Answer key / rubric appears wrong
+        - Too difficult at this level
+        - Too easy at this level
+        - Dataset problem
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: What happened?
+      description: What you expected, what you got, what you tried. Unknown answers are fine here — this is a learning report, not an exam.
+    validations:
+      required: true
+  - type: input
+    id: background
+    attributes:
+      label: Your background (optional)
+      placeholder: "3rd-year biochemistry, first time using a terminal"

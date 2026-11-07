@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "If you use this material, please cite it as below. You are never required to cite it to use or teach from it."
+title: "Python for Biochemical Data and Enzyme Kinetics"
+abstract: >-
+  An intermediate open course on fitting enzyme kinetics without fooling yourself: the
+  Michaelis-Menten model, the measured cost of linearising it, weighting and error models,
+  bootstrap uncertainty, AICc model comparison, inhibition mechanisms and calibration with
+  detection limits. Includes a tested teaching package (kinetics), six modules, five guided
+  practicals, a quiz with answer key, an instructor pack and simulated datasets with recorded
+  seeds and error models. Part of the CLS-Open initiative of fifteen interlinked computational
+  life-sciences courses.
+version: 0.1.0
+date-released: "2026-11-07"
+license: MIT
+license-url: "https://github.com/cls-open/python-for-biochemists/blob/main/LICENSES/README.md"
+type: software
+authors:
+  - family-names: Tolulope
+    given-names: Ademola Emmanuel
+    affiliation: "CLS-Open"
+keywords:
+  - biochemistry
+  - enzyme kinetics
+  - michaelis-menten
+  - nonlinear regression
+  - model selection
+  - open educational resources
+  - reproducible research
+  - python
+repository-code: "https://github.com/cls-open/python-for-biochemists"
+url: "https://cls-open.github.io/python-for-biochemists/"
+identifiers:
+  - type: url
+    value: "https://github.com/cls-open/python-for-biochemists"
+    description: "Source repository (no DOI has been minted for v0.1.0)"
+references:
+  - type: software
+    title: "SciPy 1.0: fundamental algorithms for scientific computing in Python"
+    authors:
+      - family-names: Virtanen
+        given-names: Pauli
+      - name: "SciPy 1.0 Contributors"
+    doi: "10.1038/s41592-019-0686-2"
+    date-released: "2020-02-03"
+    notes: "Every numerical result in this package is cross-validated against SciPy."

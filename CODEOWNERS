@@ -1,0 +1,17 @@
+# Default owner for everything in this repository
+*                                   @AdemolaTolulope
+
+# Scientific content requires subject-expert review (add handles only with consent)
+/docs/modules/                      @AdemolaTolulope
+/docs/assessments/                  @AdemolaTolulope
+
+# Software
+/src/                               @AdemolaTolulope
+/tests/                             @AdemolaTolulope
+/.github/workflows/                 @AdemolaTolulope
+
+# Governance and licensing changes are never auto-merged
+/LICENSE                            @AdemolaTolulope
+/LICENSES/                          @AdemolaTolulope
+/CITATION.cff                       @AdemolaTolulope
+/CODE_OF_CONDUCT.md                 @AdemolaTolulope

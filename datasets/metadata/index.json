@@ -1,0 +1,45 @@
+{
+  "datasets": [
+    {
+      "name": "michaelis_menten",
+      "rows": 27,
+      "sha256": "33c131b003294868ccacd056c346be6eda93e9e690ea1e1134926d07f0e396cf"
+    },
+    {
+      "name": "michaelis_menten_mean",
+      "rows": 9,
+      "sha256": "b69ae8fc8e735d5a76189d8516a139ca1804e6fa1b1ea0421eee71f80f38da88"
+    },
+    {
+      "name": "cooperative_hill",
+      "rows": 10,
+      "sha256": "56d040a474d59a7e8e729e1970dfb798ae8a92e3102fc582f1809c050f203a92"
+    },
+    {
+      "name": "inhibition_series",
+      "rows": 20,
+      "sha256": "52bf8f7b36f66d019bb0295f07b0733327fb894b2b15f9181a3086e73beba7ca"
+    },
+    {
+      "name": "inhibition_weak",
+      "rows": 15,
+      "sha256": "73d351d3c75a9309b9b0405014a03f447eb6cd5d8b33852ec5044e5385f79757"
+    },
+    {
+      "name": "calibration_standards",
+      "rows": 21,
+      "sha256": "044542553f6656250a4cddf8bcc0735b693ed77bafa5985b4436064a09baf515"
+    },
+    {
+      "name": "calibration_mean",
+      "rows": 7,
+      "sha256": "92f03664519b207503d973e4a624d4ce718424f96fe63bb29b7bca5ea3ffcf33"
+    },
+    {
+      "name": "malformed_example",
+      "rows": 6,
+      "sha256": "81a8fd526270e0e98594ab7824f9a19391158599e3a5df6d0b8ca9e29339a342"
+    }
+  ],
+  "count": 8
+}

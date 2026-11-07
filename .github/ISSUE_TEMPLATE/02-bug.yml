@@ -1,0 +1,38 @@
+name: "Bug (software or exercise does not work)"
+description: A command fails, output differs from the documented output, or CI should have caught this
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Repository version / commit
+      placeholder: "v0.1.0 or commit abc1234"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options: [Linux, macOS, WSL2, Windows (native), Container, Other]
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      placeholder: "3.12.4"
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Exact commands to reproduce
+      render: bash
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs actual
+      description: Quote the documented expected output from the lesson.
+    validations:
+      required: true
